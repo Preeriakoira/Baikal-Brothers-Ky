@@ -1,0 +1,27 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1) Install Standard Firmata 2.1 on your Arduino Mega -> Arduino IDE: under examples -> Firmata -> Standard Firmata\
+\
+2) Install Maxuino\
+\
+3) Connect your DIY Mosfet boxes to the Custom RJ45 Shield, power supplies to the Mosfet boxes, and the USB cable from the Arduino Mega to your Mac (not tested on windows but should work).\
+\
+4) Open 42CH OUTPUT USING MAXUINO AND ARDUINO MEGA.maxpat\
+\
+5) Select your Arduino Mega in the Maxuino environment and initialize.\
+\
+6) Open the "p parsingnotes" subpatch\
+\
+7) Press the Test toggle button. You should now see the LED on the Arduino Mega blinking and if you have everything connected, you should already have your motors activating in sequence. If things are not working, start to troubleshoot the Maxuino - Arduino connection.\
+\
+8) If things are working, great! You can now send Midi note messages from your DAW to the port Max 1. Use the shared "heat time" to adjust how long the motors are kept on before they automatically turn off. This is a setting of a delay object in the "p sol" subpatches. If you are using solenoids, the coils will burn if they are kept on for ever, and therefore needs to be activated with short pulses only. If you are using a variety of different motors, then you can fine tune the delays in the "p sol" sub patches.\
+\
+9) Enjoy and have fun expanding this patch, experimenting with other forms of inputs than just midi etc..!\
+\
+Eero Nieminen\
+eero.a.nieminen@gmail.com\
+}

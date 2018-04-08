@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1) Install ARDUINO_MAX_XBEE_7CH.ino code on an Arduino Uno with xbee shield and xbee radio receiver.\
+2) Open ARDUINO MAX XBEE 7 CHANNEL.maxpat Max patch on a Mac (haven't tested on pc, but should work).\
+3) Press the Button on the patch to update the serialport. Select your transmitting xbee.\
+4) Press TEST toggle button to see if your connection is working. See if your arduino Uno is indicating that it is receiving anything if you have no solenoids, dc motors etc already hooked in. \
+5) If everything works, THEN GREAT! If something is wrong, its probably in the xbee connection... The max patch is really straight forward and there should not be any problems. You can try updating the port again and so on... Some times encountered a problem, where the same serial port I was using before did not work again, it somehow got "stuck". This only happened if the transmitting xbee was removed while from the port if the patch was running. A reboot of the Mac sorted this issue.\
+6) Ok, the connection is now working, place the M4L device (AUDIO THRESHOLD BANG.amxd) into a send in Ableton. It is not meant to be in the audio path. It works so that you use the Band pass filter, select a frequency area where you hear something interesting, set a threshold volume and when the audio gets past that threshold, it sends a bang message to the max patch that is running outside live. You have to click one of the ports in the M4L device to have it sending from the desired port.\
+7) If everything works now, you should be already seeing your motors activating to the rythm of what ever is happening in the chosen frequency area. You can manually open and close the gates in the max patch for artistic expression. This is helpful if the sounds from the selected frequency band are coming from a live instrument etc. \
+8) For every different solenoid you might need to set a separate "HEAT TIME"... The common HEAT TIME is good if all the motors are the same. Usually 20-50ms heat times work nicely with solenoids. Remember the higher the heat time, the less frequently the solenoid can be active...\
+\
+Have a lot of fun with this! Remember that you can place multiple M4L devices in the same send channel if you want to get a lot of motors activating from the same sound source at different times.\
+\
+CC Eero Nieminen  \
+eero.a.nieminen@gmail.com\
+Jokke Heikkil\'e4 helped a lot in the Arduino code! \
+\
+}
